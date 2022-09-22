@@ -12,7 +12,7 @@ The following table shows the version of HMLR Frontend Jinja that you should use
 
 | HMLR Frontend Jinja Version | Target HMLR Frontend Version |
 | --------------------------- | ---------------------------- |
-| [0.1.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/0.1.0) | [1.0.0-rc1](https://github.com/LandRegistry/hmlr-frontend/releases/tag/1.0.0-rc1) |
+| [0.2.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/0.2.0) | [1.0.0-rc1](https://github.com/LandRegistry/hmlr-frontend/releases/tag/1.0.0-rc1) |
 
 Any other versions of HMLR Frontend not shown above _may_ still be compatible, but have not been specifically tested and verified.
 
