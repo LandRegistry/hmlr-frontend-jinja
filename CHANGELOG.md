@@ -8,9 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [1.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.0.0) - 16/11/2022
 
-### Changed
+### Added
 
-- Bump version to full v1 release
+- [HMLR Frontend v1.1.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/1.1.0) support
 
 ## [0.2.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/0.2.0) - 22/09/2022
 
