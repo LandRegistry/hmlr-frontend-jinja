@@ -13,7 +13,7 @@ for directory in directories:
 
 setuptools.setup(
     name="hmlr-frontend-jinja",
-    version="0.2.0",
+    version="1.0.0",
     author="Matt Shaw",
     author_email="matthew.shaw@landregistry.gov.uk",
     description="HMLR Frontend Jinja Macros",
