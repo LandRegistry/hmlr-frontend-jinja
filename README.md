@@ -1,7 +1,7 @@
 # HMLR Frontend Jinja Macros
 
 [![PyPI version](https://badge.fury.io/py/hmlr-frontend-jinja.svg)](https://pypi.org/project/hmlr-frontend-jinja/)
-![hmlr-frontend 1.0.0](https://img.shields.io/badge/hmlr--frontend%20version-1.0.0-005EA5?logo=gov.uk&style=flat)
+![hmlr-frontend 1.1.0](https://img.shields.io/badge/hmlr--frontend%20version-1.1.0-005EA5?logo=gov.uk&style=flat)
 [![Python package](https://github.com/LandRegistry/hmlr-frontend-jinja/actions/workflows/python-package.yml/badge.svg)](https://github.com/LandRegistry/hmlr-frontend-jinja/actions/workflows/python-package.yml)
 
 This repository provides a complete set of [Jinja](https://jinja.palletsprojects.com/) macros that are kept up-to-date and 100% compliant with the original [HMLR Frontend](https://github.com/LandRegistry/hmlr-frontend) Nunjucks macros. Porting is intentionally manual rather than automated to make updates simpler than maintaining an automated conversion routine.
