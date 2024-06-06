@@ -1,7 +1,7 @@
 {% macro hmlrFooter(params) %}
-<footer class="govuk-footer govuk-footer--hmlr {{ params.classes if params.classes }}" role="contentinfo"
+  <footer class="govuk-footer govuk-footer--hmlr {{ params.classes if params.classes else '' }}" role="contentinfo"
         {%- for attribute, value in (params.attributes.items() if params.attributes else {}.items()) %} {{attribute}}="{{value}}"{% endfor %}>
-  <div class="govuk-width-container {{ params.containerClasses if params.containerClasses }}">
+  <div class="govuk-width-container {{ params.containerClasses if params.containerClasses else '' }}">
     {% if 'navigation' in params and (params.navigation | length) %}
       <div class="govuk-footer__navigation">
         {% for nav in params.navigation %}
@@ -53,13 +53,13 @@
         {% endif %}
       </div>
       <div class="govuk-footer__meta-item">
-        <span
+        <a
           class="govuk-footer__link govuk-footer__copyright-logo govuk-footer__copyright-logo--hmlr"
         >
           {%- if params.copyright and (params.copyright.html or params.copyright.text) -%}
             {{ params.copyright.html | safe if params.copyright.html else params.copyright.text }}
           {%- endif -%}
-        </span>
+        </a>
       </div>
     </div>
   </div>

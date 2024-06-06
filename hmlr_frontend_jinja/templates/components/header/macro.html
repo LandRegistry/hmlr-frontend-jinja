@@ -4,15 +4,15 @@
   <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
     <div class="govuk-header__content govuk-header__content--hmlr">
     {% if params.serviceName %}
-    {% if params.serviceUrl %}
-      <a href="{{ params.serviceUrl }}" class="govuk-header__link govuk-header__service-name">
-        {{ params.serviceName }}
-      </a>
-    {% else %}
-      <span class="govuk-header__service-name">
-        {{ params.serviceName }}
-      </span>
-    {% endif %}
+      {% if params.serviceUrl %}
+        <a href="{{ params.serviceUrl }}" class="govuk-header__link govuk-header__service-name">
+          {{ params.serviceName }}
+        </a>
+      {% else %}
+        <span class="govuk-header__service-name">
+          {{ params.serviceName }}
+        </span>
+      {% endif %}
     {% endif %}
     </div>
   </div>
