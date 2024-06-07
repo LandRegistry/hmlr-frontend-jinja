@@ -1,17 +1,19 @@
 {% macro hmlrHeader(params) %}
-<header class="govuk-header govuk-header--hmlr {{ params.classes if params.classes }}" role="banner" data-module="govuk-header"
-        {%- for attribute, value in (params.attributes.items() if params.attributes else {}.items()) %} {{attribute}}="{{value}}"{% endfor %}>
-  <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
+{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
+
+<header class="govuk-header govuk-header--hmlr {%- if params.classes %} {{ params.classes }}{% endif %}" data-module="govuk-header"
+  {{- govukAttributes(params.attributes) }}>
+  <div class="govuk-header__container {{ params.containerClasses | default("govuk-width-container", true) }}">
     <div class="govuk-header__content govuk-header__content--hmlr">
     {% if params.serviceName %}
       {% if params.serviceUrl %}
-        <a href="{{ params.serviceUrl }}" class="govuk-header__link govuk-header__service-name">
-          {{ params.serviceName }}
-        </a>
+      <a href="{{ params.serviceUrl }}" class="govuk-header__link govuk-header__service-name">
+        {{ params.serviceName }}
+      </a>
       {% else %}
-        <span class="govuk-header__service-name">
-          {{ params.serviceName }}
-        </span>
+      <span class="govuk-header__service-name">
+        {{ params.serviceName }}
+      </span>
       {% endif %}
     {% endif %}
     </div>
