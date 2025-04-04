@@ -1,7 +1,7 @@
 {% macro hmlrFooter(params) %}
 {% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
 
-<footer class="govuk-footer govuk-footer--hmlr {%- if params.classes %} {{ params.classes }}{% endif %}"
+<footer class="govuk-footer {%- if params.classes %} {{ params.classes }}{% endif %}"
   {{- govukAttributes(params.attributes) }}>
   <div class="govuk-width-container {%- if params.containerClasses %} {{ params.containerClasses }}{% endif %}">
     {% if params.navigation | length %}
@@ -53,9 +53,7 @@
         {% endif %}
       </div>
       <div class="govuk-footer__meta-item">
-        <a
-          class="govuk-footer__link govuk-footer__copyright-logo govuk-footer__copyright-logo--hmlr"
-        >
+        <a class="govuk-footer__link govuk-footer__copyright-logo">
         {% if params.copyright and (params.copyright.html or params.copyright.text) %}
           {{ params.copyright.html | safe | trim | indent(10) if params.copyright.html else params.copyright.text }}
         {% endif %}

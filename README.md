@@ -10,11 +10,11 @@ This repository provides a complete set of [Jinja](https://jinja.palletsprojects
 
 The following table shows the version of HMLR Frontend Jinja that you should use for your targeted version of HMLR Frontend:
 
-| HMLR Frontend Jinja Version | Target HMLR Frontend Version |
-| --------------------------- | ---------------------------- |
-| [2.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/2.0.0) | [2.0.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v2.0.0) |
-| [1.1.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.1.0) | [1.4.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.4.0) |
-| [1.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.0.0) | [1.1.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.1.0) |
+| HMLR Frontend Jinja Version                                                     | Target HMLR Frontend Version                                                       |
+| ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| [2.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/2.0.0) | [2.0.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v2.0.0)         |
+| [1.1.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.1.0) | [1.4.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.4.0)         |
+| [1.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.0.0) | [1.1.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.1.0)         |
 | [0.2.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/0.2.0) | [1.0.0-rc1](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.0.0-rc1) |
 
 Any other versions of HMLR Frontend not shown above _may_ still be compatible, but have not been specifically tested and verified.
