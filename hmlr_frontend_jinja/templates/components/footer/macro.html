@@ -52,13 +52,6 @@
         {% endif %}
         {% endif %}
       </div>
-      <div class="govuk-footer__meta-item">
-        <a class="govuk-footer__link govuk-footer__copyright-logo">
-        {% if params.copyright and (params.copyright.html or params.copyright.text) %}
-          {{ params.copyright.html | safe | trim | indent(10) if params.copyright.html else params.copyright.text }}
-        {% endif %}
-        </a>
-      </div>
     </div>
   </div>
 </footer>
