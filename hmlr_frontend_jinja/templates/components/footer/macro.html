@@ -1,8 +1,10 @@
 {% macro hmlrFooter(params) %}
-{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
+{% from "hmlr_frontend_jinja/macros/attributes.html" import hmlrAttributes -%}
+
+{%- set _rebrand = params.rebrand | default(govukRebrand() if govukRebrand and govukRebrand is callable else govukRebrand) -%}
 
 <footer class="govuk-footer {%- if params.classes %} {{ params.classes }}{% endif %}"
-  {{- govukAttributes(params.attributes) }}>
+  {{- hmlrAttributes(params.attributes) }}>
   <div class="govuk-width-container {%- if params.containerClasses %} {{ params.containerClasses }}{% endif %}">
     {% if params.navigation | length %}
       <div class="govuk-footer__navigation">
@@ -16,7 +18,7 @@
                   {% if item.href and item.text %}
                     <li class="govuk-footer__list-item">
                       <a class="govuk-footer__link" href="{{ item.href }}"
-                        {{- govukAttributes(item.attributes) }}>
+                        {{- hmlrAttributes(item.attributes) }}>
                         {{ item.text }}
                       </a>
                     </li>
@@ -38,7 +40,7 @@
         {% for item in params.meta['items'] %}
           <li class="govuk-footer__inline-list-item">
             <a class="govuk-footer__link" href="{{ item.href }}"
-              {{- govukAttributes(item.attributes) }}>
+              {{- hmlrAttributes(item.attributes) }}>
               {{ item.text }}
             </a>
           </li>
