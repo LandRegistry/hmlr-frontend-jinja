@@ -44,10 +44,7 @@ To use a component in your project templates you must import and call the compon
 ```html
 {%- from 'hmlr_frontend_jinja/components/header/macro.html' import hmlrHeader -%}
 
-{{ hmlrHeader({
-  'serviceName': "Service name",
-  'serviceUrl': "#"
-}) }}
+{{ hmlrHeader({}) }}
 ```
 
 The options available to each component macro can be found in the original [HMLR Design System Components](https://hmlr-design-system.herokuapp.com/components/) documentation. Since this project is a like-for-like port, the only difference between the Nunjucks examples and their Jinja equivalents is having to quote key names, e.g. `'text'` instead of `text`.
