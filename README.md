@@ -1,7 +1,7 @@
 # HMLR Frontend Jinja Macros
 
 [![PyPI version](https://badge.fury.io/py/hmlr-frontend-jinja.svg)](https://pypi.org/project/hmlr-frontend-jinja/)
-![hmlr-frontend 1.1.0](https://img.shields.io/badge/hmlr--frontend%20version-1.1.0-005EA5?logo=gov.uk&style=flat)
+![Static Badge](https://img.shields.io/badge/GOV.UK%20Frontend-v5.13.0-blue)
 [![Python package](https://github.com/LandRegistry/hmlr-frontend-jinja/actions/workflows/python-package.yml/badge.svg)](https://github.com/LandRegistry/hmlr-frontend-jinja/actions/workflows/python-package.yml)
 
 This repository provides a complete set of [Jinja](https://jinja.palletsprojects.com/) macros that are kept up-to-date and 100% compliant with the original [HMLR Frontend](https://github.com/LandRegistry/hmlr-frontend) Nunjucks macros. Porting is intentionally manual rather than automated to make updates simpler than maintaining an automated conversion routine.
@@ -10,12 +10,13 @@ This repository provides a complete set of [Jinja](https://jinja.palletsprojects
 
 The following table shows the version of HMLR Frontend Jinja that you should use for your targeted version of HMLR Frontend:
 
-| HMLR Frontend Jinja Version                                                     | Target HMLR Frontend Version                                                       |
-| ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [2.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/2.0.0) | [2.0.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v2.0.0)         |
-| [1.1.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.1.0) | [1.4.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.4.0)         |
-| [1.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.0.0) | [1.1.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.1.0)         |
-| [0.2.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/0.2.0) | [1.0.0-rc1](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.0.0-rc1) |
+| HMLR Frontend Jinja Version                                                     | Target Frontend Version                                                                          |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [3.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/3.0.0) | [GOV.UK Frontend 5.13.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.13.0)        |
+| [2.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/2.0.0) | [HMLR Frontend 2.0.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v2.0.0)         |
+| [1.1.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.1.0) | [HMLR Frontend 1.4.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.4.0)         |
+| [1.0.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/1.0.0) | [HMLR Frontend 1.1.0](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.1.0)         |
+| [0.2.0](https://github.com/LandRegistry/hmlr-frontend-jinja/releases/tag/0.2.0) | [HMLR Frontend 1.0.0-rc1](https://github.com/LandRegistry/hmlr-frontend/releases/tag/v1.0.0-rc1) |
 
 Any other versions of HMLR Frontend not shown above _may_ still be compatible, but have not been specifically tested and verified.
 
@@ -31,8 +32,14 @@ app = Flask(__name__)
 
 app.jinja_loader = ChoiceLoader(
     [
-        PackageLoader("app"),
-        PrefixLoader({"hmlr_frontend_jinja": PackageLoader("hmlr_frontend_jinja")}),
+        PackageLoader("server"),
+        PrefixLoader(
+            {
+                "govuk_frontend_jinja": PackageLoader("govuk_frontend_jinja"),
+                "govuk_frontend_wtf": PackageLoader("govuk_frontend_wtf"),
+                "hmlr_frontend_jinja": PackageLoader("hmlr_frontend_jinja"),
+            }
+        ),
     ]
 )
 ```
